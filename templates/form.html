@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Invoice Form</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/checkout/">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container">
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h2>Invoice form form</h2>
+    <p class="lead">Fill this form to generate invoice</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Invoice</h4>
+      <form class="needs-validation" novalidate method="POST" action="{% url 'form' %} ">
+          {% csrf_token %}
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="productType">Product type</label>
+            <input type="text" class="form-control" id="productType" placeholder="" value="" name="productType" required>
+            <div class="invalid-feedback">
+              Valid product type is required.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mb-3">
+          <label for="ContactID">Contact Id</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="text" class="form-control" id="contactID" placeholder="Contact ID" name="contactID" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Your Contact Id is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="date">Date</label>
+          <input type="date" class="form-control" id="date" placeholder="" name="date" required>
+            <div class="invalid-feedback">
+            Please enter correct date.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="dueDate">Due Date</label>
+          <input type="date" class="form-control" id="dueDate" placeholder="" name="dueDate" required>
+          <div class="invalid-feedback">
+            Please enter correct due date
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="lineAmountType">Line Amount Types</label>
+          <input type="text" class="form-control" id="lineAmountType" name="lineAmountTypes" placeholder="Ex. Exclusive">
+        </div>
+
+           <div class="mb-3">
+          <label for="description">Description</label>
+          <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+        </div>
+
+           <div class="mb-3">
+          <label for="quantity">Quantity</label>
+          <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Quantity">
+        </div>
+
+           <div class="mb-3">
+          <label for="unitAmount">Unit Amount</label>
+          <input type="text" class="form-control" id="unitAmount" name="unitAmount" placeholder="Unit Amount">
+        </div>
+
+           <div class="mb-3">
+          <label for="accountCode">Account Code</label>
+          <input type="text" class="form-control" id="accountCode" name="accountCode" placeholder="Account code">
+        </div>
+
+           <div class="mb-3">
+          <label for="discountRate">Discount Rate</label>
+          <input type="text" class="form-control" id="discountRate" name="discountRate" placeholder="Discount Rate">
+        </div>
+
+
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Get Invoice</button>
+          <br><br>
+      </form>
+    </div>
+  </div>
+
+
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+        <script src="form-validation.js">
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        </script></body>
+</html>
