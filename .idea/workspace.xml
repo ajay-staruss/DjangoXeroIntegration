@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="136133bc-4650-4430-aae7-681f56a8c15b" name="Default Changelist" comment="" />
+    <list default="true" id="136133bc-4650-4430-aae7-681f56a8c15b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoice/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xero_invoice/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/xero_invoice/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,14 +27,27 @@
     <expand />
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1blnVN36f8gHPKHEX5G75vbPnfI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
   </component>
@@ -86,7 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1589215570728</updated>
       <workItem from="1589215649456" duration="9992000" />
-      <workItem from="1589269037535" duration="4656000" />
+      <workItem from="1589269037535" duration="6969000" />
+      <workItem from="1589300793903" duration="1135000" />
     </task>
     <servers />
   </component>
@@ -94,21 +114,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1696" height="159" key="GridCell.Tab.0.bottom" timestamp="1589278492169">
+    <state width="1696" height="159" key="GridCell.Tab.0.bottom" timestamp="1589281490953">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state width="1696" height="159" key="GridCell.Tab.0.bottom/0.0.1739.939@0.0.1739.939" timestamp="1589278492169" />
-    <state width="1696" height="159" key="GridCell.Tab.0.center" timestamp="1589278492169">
+    <state width="1696" height="159" key="GridCell.Tab.0.bottom/0.0.1739.939@0.0.1739.939" timestamp="1589281490953" />
+    <state width="1696" height="159" key="GridCell.Tab.0.center" timestamp="1589281490953">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state width="1696" height="159" key="GridCell.Tab.0.center/0.0.1739.939@0.0.1739.939" timestamp="1589278492169" />
-    <state width="1696" height="159" key="GridCell.Tab.0.left" timestamp="1589278492169">
+    <state width="1696" height="159" key="GridCell.Tab.0.center/0.0.1739.939@0.0.1739.939" timestamp="1589281490953" />
+    <state width="1696" height="159" key="GridCell.Tab.0.left" timestamp="1589281490953">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state width="1696" height="159" key="GridCell.Tab.0.left/0.0.1739.939@0.0.1739.939" timestamp="1589278492169" />
-    <state width="1696" height="159" key="GridCell.Tab.0.right" timestamp="1589278492169">
+    <state width="1696" height="159" key="GridCell.Tab.0.left/0.0.1739.939@0.0.1739.939" timestamp="1589281490953" />
+    <state width="1696" height="159" key="GridCell.Tab.0.right" timestamp="1589281490953">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state width="1696" height="159" key="GridCell.Tab.0.right/0.0.1739.939@0.0.1739.939" timestamp="1589278492169" />
+    <state width="1696" height="159" key="GridCell.Tab.0.right/0.0.1739.939@0.0.1739.939" timestamp="1589281490953" />
   </component>
 </project>

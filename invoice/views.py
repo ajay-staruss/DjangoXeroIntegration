@@ -1,7 +1,8 @@
-
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.core.cache import cache
+import xero
 
 from xero import Xero
 from xero.auth import OAuth2Credentials
@@ -13,6 +14,11 @@ client_secret = 'jgmVIa00CB-KPGztOlAz7ATpsSjiiB0ZqFup0jDlV6SS4pWb'
 callback_uri = 'http://localhost:8000/form'
 
 # Create your views here.
+
+def login(request):
+       return render(request,'login.html')
+
+
 def form(request):
        if(request.method == 'POST'):
               productType = request.POST['productType']
@@ -29,6 +35,29 @@ def form(request):
                           description=description,quantity=quantity,unitAmount=unitAmount,accountCode=accountCode,
                           discountRate=discountRate)
               form.save()
+              jsonData = {
+                            "Type": productType,
+                            "Contact": {
+                            "ContactID": contactID
+                            },
+                            "Date": date,
+                            "DueDate": dueDate,
+                            "DateString": "2009-05-27T00:00:00",
+                            "DueDateString": "2009-06-06T00:00:00",
+                            "LineAmountTypes": lineAmountTypes,
+                            "LineItems": [
+                            {
+                            "Description": description,
+                            "Quantity": quantity,
+                            "UnitAmount": unitAmount,
+                            "AccountCode": accountCode,
+                            "DiscountRate": discountRate
+                            }
+                            ]}
+              jsonFetch = JsonResponse(jsonData)
+              print(jsonFetch)
+              xero.contacts.put(jsonFetch)
+
               return render(request,'form.html')
        else:
               return render(request,'form.html')
@@ -62,5 +91,6 @@ def some_view_which_calls_xero(request):
        xero = Xero(credentials)
 
        contacts = xero.contacts.all()
+
 
 
