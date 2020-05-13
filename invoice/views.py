@@ -11,7 +11,7 @@ from .models import Form
 
 client_id = '49A1007E580642A489BC7CAA3B4A661C'
 client_secret = 'jgmVIa00CB-KPGztOlAz7ATpsSjiiB0ZqFup0jDlV6SS4pWb'
-callback_uri = 'http://localhost:8000/form'
+callback_uri = 'https://infinite-stream-24407.herokuapp.com/form'
 
 # Create your views here.
 
