@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="136133bc-4650-4430-aae7-681f56a8c15b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/invoice/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xero_invoice/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/xero_invoice/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +103,7 @@
       <workItem from="1589215649456" duration="9992000" />
       <workItem from="1589269037535" duration="6969000" />
       <workItem from="1589300793903" duration="1599000" />
-      <workItem from="1589383932723" duration="1693000" />
+      <workItem from="1589383932723" duration="2881000" />
     </task>
     <servers />
   </component>
@@ -115,6 +111,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="635" y="274" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589388619038">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="635" y="274" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1739.939@0.0.1739.939" timestamp="1589388619038" />
     <state width="1696" height="159" key="GridCell.Tab.0.bottom" timestamp="1589386791987">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
