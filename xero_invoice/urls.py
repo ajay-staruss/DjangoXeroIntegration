@@ -10,6 +10,7 @@ urlpatterns = [
 	path('auth/',views.start_xero_auth_view, name ='auth'),
 	path('',views.login,name='login'),
 	path('xero/',views.some_view_which_calls_xero,name='xero'),
-	path('callback/',views.process_callback_view,name='callback')
+	path('callback/',views.process_callback_view,name='callback'),
+	path('success/',views.success,name='success'),
 
 ]

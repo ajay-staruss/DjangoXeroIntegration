@@ -20,7 +20,7 @@ def login(request):
 
 
 def form(request):
-       if(request.method == 'POST'):
+        if(request.method == 'POST'):
               productType = request.POST['productType']
               contactID = request.POST['contactID']
               date = request.POST['date']
@@ -31,11 +31,13 @@ def form(request):
               unitAmount = request.POST['unitAmount']
               accountCode = request.POST['accountCode']
               discountRate = request.POST['discountRate']
-              form = Form(productType=productType, contactID = contactID, date=date,dueDate=dueDate,lineAmountTypes=lineAmountTypes,
+              if(productType and contactID and date and dueDate and lineAmountTypes and description and quantity and unitAmount and accountCode and discountRate ):
+
+                    form = Form(productType=productType, contactID = contactID, date=date,dueDate=dueDate,lineAmountTypes=lineAmountTypes,
                           description=description,quantity=quantity,unitAmount=unitAmount,accountCode=accountCode,
                           discountRate=discountRate)
-              form.save()
-              jsonData = {
+                    form.save()
+                    jsonData = {
                             "Type": productType,
                             "Contact": {
                             "ContactID": contactID
@@ -54,12 +56,14 @@ def form(request):
                             "DiscountRate": discountRate
                             }
                             ]}
-              jsonFetch = JsonResponse(jsonData)
-              print(jsonFetch)
-              xero.contacts.put(jsonFetch)
+                    jsonFetch = JsonResponse(jsonData)
+                    print(jsonFetch)
+                    #xero.contacts.put(jsonFetch)
 
-              return render(request,'form.html')
-       else:
+                    return redirect(success)
+              else:
+                  return render(request,'form.html')
+        else:
               return render(request,'form.html')
 
 
@@ -92,5 +96,6 @@ def some_view_which_calls_xero(request):
 
        contacts = xero.contacts.all()
 
-
+def success(request):
+    return render(request,'message.html')
 
